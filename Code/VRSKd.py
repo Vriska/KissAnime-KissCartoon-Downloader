@@ -2,7 +2,7 @@ import requests
 import sys
 import time
 import os
-def download(x,z,y):
+def download(x,z,y): #downloads episode from URL
         URL = x
         r = requests.get(URL,stream=True)
         k = (r.headers.get('content-length'))
