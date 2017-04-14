@@ -8,7 +8,7 @@ import os
 import js2py 
 
 
-def  get(x): #Creates a list of episodes from episode page
+def  get(x): #Creates a list of episodes in kisscartoon / kissanime in season page
     list = []
     scraper = cfscrape.create_scraper()
     r = scraper.get(x)
