@@ -11,7 +11,7 @@ from selenium import webdriver
 def __del__(self):
     type(self).count -= 1
 
-def get(x):             #Gets list of indivdual episodes in kisscartoon/anime in kiss cartons 
+def get(x):             #Gets URL of source download page in episode page of kissanime/kisscartoon 
     FIRE =''
     path = r'C:\\Program Files\\PhantomJS\\hlb.exe'
     browser = webdriver.PhantomJS(path)
