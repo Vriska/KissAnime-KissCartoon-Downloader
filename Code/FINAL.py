@@ -20,6 +20,8 @@ def  get(x): #Creates a list of episodes from episode page
     new_list = ['http://www.kisscartoon.me/' + x for x in list]
     return new_list
 
+#UI STUFF
+
 k = str(input('INSERT ANIME LIST URL '))
 k = k.strip()
 print(k)
