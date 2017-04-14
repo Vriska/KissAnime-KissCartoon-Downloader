@@ -8,7 +8,7 @@ import os
 import js2py 
 
 
-def  get(x):
+def  get(x): #Creates a list of episodes from episode page
     list = []
     scraper = cfscrape.create_scraper()
     r = scraper.get(x)
