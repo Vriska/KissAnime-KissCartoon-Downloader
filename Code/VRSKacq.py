@@ -13,7 +13,7 @@ def __del__(self):
 
 def get(x):             #Gets URL of source download page in episode page of kissanime/kisscartoon 
     FIRE =''
-    path = r'C:\\Program Files\\PhantomJS\\hlb.exe'
+    path = r'C:\\Program Files\\PhantomJS\\phantomjs.exe'
     browser = webdriver.PhantomJS(path)
     browser.set_window_size(1400, 1000)
     browser.get(x)
@@ -27,6 +27,5 @@ def get(x):             #Gets URL of source download page in episode page of kis
 
     soup = BeautifulSoup(k,'html.parser')
 
-    for a in soup.find_all('a',string=re.compile('HERE')):
-        FIRE = a.get('href')
-    return FIRE
+    FIRE = soup.find('a', string=re.compile('mp4'))
+    return FIRE.get('href')
